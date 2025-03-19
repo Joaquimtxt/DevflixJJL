@@ -1,6 +1,7 @@
 import styles from './Footer.module.css'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
+import DevGithub from './DevGithub';
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
             <div className='col-12 col-md text-center mt-2 mt-md-0 p-md-3 text-decoration-none '>
                 <div className='credits text-danger'>
                 Projeto desenvolvido por: 
-                   <a href='https://github.com/JoaoFCosta' className='fw-bolder text-decoration-none text-secondary'>  @JoaoFCosta </a> | <a href='https://github.com/JoaoFCosta' className='text-decoration-none fw-bolder text-secondary'> @Joaquimtxt </a> | <a href='https://github.com/JoaoFCosta' className='text-secondary text-decoration-none fw-bolder'> @LLuizXL </a>
+                   <DevGithub github="https://github.com/JoaoFCosta" devNome="@JoaoFCosta" />| <DevGithub github="https://github.com/Joaquimtxt" devNome="@Joaquimtxt"/>| <DevGithub github="https://github.com/LLuizXL" devNome="@LLuizXL"/>
                 </div>
             </div>
         </div>
