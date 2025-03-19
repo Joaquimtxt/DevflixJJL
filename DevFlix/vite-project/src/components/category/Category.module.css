@@ -1,0 +1,11 @@
+.categoryContainer {
+  text-align: center;
+}
+
+.categoryContainer h5 {
+  color: white;
+}
+
+.categoryContainer h1 {
+    color: red;
+}

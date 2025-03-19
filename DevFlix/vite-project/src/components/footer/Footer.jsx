@@ -1,4 +1,4 @@
-import styles from './Footer.module.css'
+import styles from "./Footer.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
 import DevGithub from './DevGithub';
@@ -29,4 +29,4 @@ const Footer = () => {
   )
 }
 
-export default Footer
+export default Footer;

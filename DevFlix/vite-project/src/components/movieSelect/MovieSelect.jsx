@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 
 const MovieSelect = () => {
   return (
-    <div className='movie d-flex flex-column flex-md-row justify-content-center my-5'>
+    <div className='movie d-flex flex-column flex-md-row justify-content-center my-5 text-light'>
 
     <div className='m-1'>
         <img src='https://placehold.co/300x400'></img>

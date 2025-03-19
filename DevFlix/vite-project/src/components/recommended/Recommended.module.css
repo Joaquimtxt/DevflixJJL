@@ -1,0 +1,41 @@
+.containerRecommended {
+    overflow: hidden;
+}
+
+.infoText {
+    position: absolute;
+    left: 2rem;
+    top: 10rem;
+    box-sizing: border-box;
+}
+
+
+.btnRecommended {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.btnRecommended:hover {
+    color: white;
+  animation: rgb 5s infinite;
+}
+
+@keyframes rgb {
+  0% {
+    background-color: red;
+  }
+  50% {
+    background-color: green;
+  }
+
+  100% {
+    background-color: blue;
+  }
+}
