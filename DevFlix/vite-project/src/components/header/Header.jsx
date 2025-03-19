@@ -25,6 +25,16 @@ const Header = () => {
           </a>
         </li>
       </nav>
+      <div className={`d-flex align-items-center ${styles.back}`}>
+        <span className="text-light">
+          <FiSearch />
+        </span>
+        <input
+          className={`${styles.searchInput} ms-2 text-light rounded bg-dark border-0 form`}
+          placeholder="Buscar"
+          type="text"
+        />
+      </div>
     </header>
   );
 };

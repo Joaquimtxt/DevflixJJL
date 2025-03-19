@@ -10,17 +10,20 @@ const Category = () => {
         <div className="movie d-flex flex-column flex-md-row justify-content-center my-5 text-light">
           <div className="m-1">
             <img src="https://placehold.co/300x400"></img>
-            <div className="position-absolute">Movie Title</div>
+            <div className={styles.categoryTitle}>Category Title</div>
+            <div className={styles.movieTitle}>Movie Title</div>
           </div>
 
           <div className="m-1">
             <img src="https://placehold.co/300x400"></img>
-            <div className="position-absolute">Movie Title</div>
+            <div className={styles.categoryTitle}>Category Title</div>
+            <div className={styles.movieTitle}>Movie Title</div>
           </div>
 
           <div className="m-1">
             <img src="https://placehold.co/300x400"></img>
-            <div className="position-absolute">Movie Title</div>
+            <div className={styles.categoryTitle}>Category Title</div>
+            <div className={styles.movieTitle}>Movie Title</div>
           </div>
         </div>
       </div>
