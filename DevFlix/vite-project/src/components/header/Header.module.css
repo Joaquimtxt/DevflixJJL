@@ -30,16 +30,30 @@ header {
 }
 
 header a {
-    color: white;
-    text-decoration: none;
-    font-weight: bolder;
-    font-size: larger;
+  color: white;
+  margin: 15px;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+.link:hover {
+  color: #ffffff;
+  border-bottom:2px solid #0077ff;
+}
+
+.logo {
+  font-size: xx-large;
+}
+
+.logo:hover{
+  color: #0077ff;
 }
 
 header li {
-    list-style: none;
-    display: inline;
-    margin: 0 1rem;
+  list-style: none;
+  display: inline;
+  margin: 0 1rem;
 }
 
 
