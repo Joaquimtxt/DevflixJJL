@@ -9,3 +9,21 @@
 .categoryContainer h1 {
     color: red;
 }
+
+.categoryList {
+  background: #000000;
+}
+
+.categoryList img {
+  mask-image: linear-gradient(to top, transparent 10%, black 100%);
+}
+
+.movieTitle {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.categoryTitle {
+  font-size: large;
+  font-weight: 500;
+}
