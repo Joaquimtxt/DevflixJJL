@@ -1,17 +1,26 @@
-import styles from './Recommended.module.css'
+import styles from "./Recommended.module.css";
 
 const Recommended = () => {
   return (
-    <div>
-        <img src='https://placehold.co/1920x400' className='w-100 h-auto' />
-        <div className='container container-fluid'>
-        <div className='desc text-secondary'>
-            Descrição muito louca sobre tal filme.   Descrição muito louca sobre tal filme.   Descrição muito louca sobre tal filme.  Descrição muito louca sobre tal filme. 
+    <div className={styles.containerRecommended}>
+      <div className={styles.infoContainer}>
+        <img src="https://placehold.co/1920x400" alt="" />
+        <div className={styles.infoText}>
+          <span>Recomendado</span>
+          <h1>Movie Title</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+            dolorem nobis, <br /> illo voluptatibus tenetur asperiores
+            perferendis quidem eaque alias officia. <br />
+            Error eaque velit vitae in dolorum officia a exercitationem ea.
+          </p>
+          <a href="#" className={styles.btnRecommended}>
+            Assistir
+          </a>
         </div>
-        <div className='btn-play btn btn-light'>Assistir</div>
-        </div>
-        </div>
-  )
-}
+      </div>
+    </div>
+  );
+};
 
-export default Recommended
+export default Recommended;
