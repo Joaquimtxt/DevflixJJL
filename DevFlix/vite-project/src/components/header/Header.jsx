@@ -4,10 +4,20 @@ const Header = () => {
   return (
     <header>
       <nav className="main-navigation">
-        <a href="#" className="logo">DEVFLIX</a>
-        <li><a href="#">Início</a></li>
-        <li><a href="#">Filmes</a></li>
-        <li><a href="#">Séries</a></li>
+        <a href="#" className={styles.logo} id="logo">
+          DEVFLIX
+        </a>
+        
+          <li>
+            <a href="#" className={styles.link}>Início</a>
+          </li>
+          <li>
+            <a href="#" className={styles.link}>Filmes</a>
+          </li>
+          <li>
+            <a href="#" className={styles.link}>Séries</a>
+          </li>
+        
       </nav>
     </header>
   );
