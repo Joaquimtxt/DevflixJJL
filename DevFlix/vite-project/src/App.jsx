@@ -14,7 +14,7 @@ function App() {
     <>
       <Header />
       <Recommended />
-      <MovieSelect />
+      <MovieSelect Titulo="Ação"/>
       <Category />
     <Footer />
     </>
