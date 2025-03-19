@@ -1,5 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
 
+
+
+@keyframes rgb{
+  0%{
+    color: red;
+  }
+  50%{
+    color: green;
+  }
+  
+  100%{
+    color: blue;
+  }
+}
+
 header {
   display: flex;
   justify-content: space-between;
@@ -26,3 +41,12 @@ header li {
     display: inline;
     margin: 0 1rem;
 }
+
+
+.logo:hover{
+  animation: rgb 10s infinite;
+
+}
+
+
+
