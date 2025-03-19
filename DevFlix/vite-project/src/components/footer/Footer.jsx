@@ -6,6 +6,8 @@ import DevGithub from './DevGithub';
 const Footer = () => {
   return (
      <footer className='mt-2'>
+        <div className='container'>
+            
         <div className='row'>
             <div className='col-12 col-md-4 text-center'>
                 <a href="https://instagram.com/netflix" className='text-decoration-none text-danger fw-bolder mx-3'><img src='https://placehold.co/60x60'></img></a>
@@ -21,6 +23,7 @@ const Footer = () => {
             </div>
         </div>
         <div className='row'>
+        </div>
         </div>
      </footer>
   )
