@@ -46,10 +46,6 @@ header a {
   font-size: xx-large;
 }
 
-.logo:hover{
-  color: #0077ff;
-}
-
 header li {
   list-style: none;
   display: inline;
