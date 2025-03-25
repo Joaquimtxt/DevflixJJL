@@ -9,8 +9,8 @@ const MovieCard = (props) => {
 <div>
      <img src={props.Poster} alt=""></img> 
      </div>
-     <div>
-     <h3 className={`card-title text-light`}>{props.Title}</h3>  
+     <div className={`card-title text-light`}>
+     <h3 >{props.Title}</h3>  
      <span>{props.Type}</span>
    </div>
    </div>
