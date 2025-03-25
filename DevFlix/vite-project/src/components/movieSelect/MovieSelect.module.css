@@ -97,18 +97,4 @@
 .scrollIcon2 {
   left: 10px;
 }
-  @media only screen and (max-width: 700px) {
-  /* Celulares maiores */
-  .scrollIcon1, .scrollIcon2 {
-    width: 60px;
-    height: 60px;
-    z-index: 1000;
-  }
-  .scrollIcon1 {
-    right: 0px;
-  }
-  
-  .scrollIcon2 {
-    left: 0px;
-  }
-  }
+
