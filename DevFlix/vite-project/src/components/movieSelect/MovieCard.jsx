@@ -1,13 +1,15 @@
 import styles from "./MovieSelect.module.css";
 
+
 const MovieCard = (props) => {
+  const poster = `https://image.tmdb.org/t/p/w300/${props.Poster}`
   return (
     <div className={`m-1 card-body ${styles.card}`}>
       <div>
         <p>{props.Year}</p>
       </div>
       <div>
-        <img src={props.Poster} alt=""></img>
+        <img src={poster} alt=""></img>
       </div>
       <div className={`card-title text-light`}>
         <h3>{props.Title}</h3>
