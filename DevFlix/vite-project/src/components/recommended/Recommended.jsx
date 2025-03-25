@@ -11,12 +11,12 @@ const Recommended = (props) => {
         <div className={styles.infoContainer}>
           <img src={poster} alt="" className="img-fluid object-fit-cover" />
           <div className={styles.infoText}>
-            <span className="text-light">Recomendado</span>
+            <span className="text-dark">Recomendado</span>
             <div className={styles.titleContainer}>
-              <h1 className="text-light">{props.Title}</h1>
+              <h1 className="text-dark">{props.Title}</h1>
             </div>
             <div className={styles.descContainer}>
-              <p className="text-light">{props.Desc}</p>
+              <p className="text-dark">{props.Desc}</p>
             </div>
             <a href="#" className={styles.btnRecommended}>
               Assistir
