@@ -6,25 +6,25 @@ const Recommended = (props) => {
   console.log("Props recebidas:", props);
 
   return (
+    
+      <div className="container-fluid p-3 mt-3">
     <div className={styles.containerRecommended}>
-      <div className="container-fluid mt-3 mb-3">
-        <div className={styles.infoContainer}>
-          <img src={poster} alt="" className="img-fluid object-fit-cover" />
-          <div className={styles.infoText}>
-            <span className="text-dark">Recomendado</span>
-            <div className={styles.titleContainer}>
-              <h1 className="text-dark">{props.Title}</h1>
-            </div>
-            <div className={styles.descContainer}>
-              <p className="text-dark">{props.Desc}</p>
-            </div>
-            <a href="#" className={styles.btnRecommended}>
-              Assistir
-            </a>
-          </div>
+      <div className={styles.infoContainer}>
+        <img src={poster} alt="" className="img-fluid object-fit-cover" />
+        <div className={styles.infoText}>
+          <span>Recomendado</span>
+          <h1>{props.Title}</h1>
+          <p>
+           {props.Desc}
+          </p>
+          <a href="#" className={styles.btnRecommended}>
+            Assistir
+          </a>
         </div>
       </div>
     </div>
+    </div>
+
   );
 };
 

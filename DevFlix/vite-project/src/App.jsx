@@ -27,6 +27,7 @@ const App = () => {
   const apiUrl = "https://api.themoviedb.org/3/";
   const options = {
     method: "GET",
+    method: "GET",
     headers: {
       accept: "application/json",
       Authorization:
@@ -39,6 +40,7 @@ const App = () => {
     .then((res) => console.log(res))
     .catch((err) => console.error(err));
   return (
+    
     <Router>
       <Header />
       <Routes>
@@ -56,5 +58,6 @@ const App = () => {
     </Router>
   );
 };
+
 
 export default App;

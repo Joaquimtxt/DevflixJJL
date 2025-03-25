@@ -1,12 +1,8 @@
-:root {
-    --bs-body-color: #fff;
-    --bg-body-secondary: #000;
-}
-
-[data-bg-theme="dark"] {
-    --bs-body-color: #000;
-}
-
-body {
-    background: #000000;
-}
+:root{
+    --bs-body-bg: #777;
+  }
+  
+  [data-bs-theme="dark"]{
+      --bs-body-bg: #1a1a1a;
+      --bs-body-color: red;
+  }
