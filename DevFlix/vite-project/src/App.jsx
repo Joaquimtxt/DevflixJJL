@@ -10,7 +10,21 @@ import Movies from './Pages/MoviesPage/Movies';
 import Series from './Pages/SeriesPage/Series';
 
 const App = () => {
+  const mudaTema = () => {
+    const tema = window.matchMedia("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+
+      document.documentElement.setAttribute("data-bs-theme", tema)
+  };
+
+  mudaTema()
+
+  window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", mudaTema)
+
+
   return (
+    
     <Router>
       <Header />
       <Routes>
@@ -22,5 +36,6 @@ const App = () => {
     </Router>
   );
 };
+
 
 export default App;

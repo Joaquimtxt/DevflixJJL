@@ -5,30 +5,32 @@
 .infoText {
     position: absolute;
     left: 2rem;
-    top: 10rem;
+    top: 18rem;
     box-sizing: border-box;
 }
 
 .infoContainer img{
   width: 1920px;
-  height: 400px;
+  height: 600px;
 }
 
 
 .btnRecommended {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-  border: none;
+
   padding: 10px 20px;
   font-size: 20px;
   cursor: pointer;
   border-radius: 5px;
   margin-right: 10px;
   text-decoration: none;
+  transition: all 0.4s;
 }
-
 .btnRecommended:hover {
-    color: white;
+  box-shadow:  0px 2px 20px 1px rgba(154, 9, 12, 1);
+  transition: all 0.4s;
+  color: white;
   animation: rgb 5s infinite;
 }
 
