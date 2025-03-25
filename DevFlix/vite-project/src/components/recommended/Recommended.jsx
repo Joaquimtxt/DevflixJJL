@@ -1,10 +1,4 @@
-import { useState, useEffect } from "react";
 import styles from "./Recommended.module.css";
-
-
-
-
-
 
 const Recommended = (props) => {
 
