@@ -13,7 +13,7 @@
   }
 }
 
-.header {
+header {
   display: flex;
   z-index: 1000;
   justify-content: space-between;
@@ -28,7 +28,7 @@
   font-family: "Raleway", sans-serif;
 }
 
-.header a {
+header a {
   color: white;
   margin: 15px;
   text-decoration: none;
