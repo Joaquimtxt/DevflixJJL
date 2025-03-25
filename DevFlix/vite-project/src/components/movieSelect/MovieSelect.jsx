@@ -20,9 +20,9 @@ const MovieSelect = ({ Titulo, movies }) => {
   };
 
   return (
-    <div className={`container-fluid bg-body-secondary ${styles.movie}`}>
-      <h1 className='ms-xl-5 ms-2'>{Titulo}</h1>
-      <div className={`position-relative ${styles.movieScroll}`}>
+    <div className={`container-fluid ${styles.movie} p-2`}>
+      <h1 className='ms-xl-5 ms-2 text-light'>{Titulo}</h1>
+      <div className={`position-relative ${styles.movieScroll}`} >
         <div
           className={`d-flex flex-nowrap justify-content-start mt-2 mb-xl-5 mb-2 ${styles.movieScroll}`}
           ref={scrollRef}

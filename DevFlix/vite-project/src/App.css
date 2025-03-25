@@ -1,3 +1,8 @@
-body {
-    background: #000000;
-}
+:root{
+    --bs-body-bg: #777;
+  }
+  
+  [data-bs-theme="dark"]{
+      --bs-body-bg: #1a1a1a;
+      --bs-body-color: red;
+  }
