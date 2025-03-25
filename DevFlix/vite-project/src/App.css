@@ -1,3 +1,12 @@
+:root {
+    --bs-body-color: #fff;
+    --bg-body-secondary: #000;
+}
+
+[data-bg-theme="dark"] {
+    --bs-body-color: #000;
+}
+
 body {
     background: #000000;
 }
