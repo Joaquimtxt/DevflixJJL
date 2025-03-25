@@ -1,18 +1,27 @@
+import { useState, useEffect } from "react";
 import styles from "./Recommended.module.css";
 
-const Recommended = () => {
+
+
+
+
+
+const Recommended = (props) => {
+
+  const poster = `https://image.tmdb.org/t/p/original/${props.Poster}`
+
+  console.log("Props recebidas:", props);
+
+
   return (
     <div className={styles.containerRecommended}>
       <div className={styles.infoContainer}>
-        <img src="https://placehold.co/1920x400" alt="" />
+        <img src={poster} alt="" className="img-fluid object-fit-cover" />
         <div className={styles.infoText}>
           <span>Recomendado</span>
-          <h1>Movie Title</h1>
+          <h1>{props.Title}</h1>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-            dolorem nobis, <br /> illo voluptatibus tenetur asperiores
-            perferendis quidem eaque alias officia. <br />
-            Error eaque velit vitae in dolorum officia a exercitationem ea.
+           {props.Desc}
           </p>
           <a href="#" className={styles.btnRecommended}>
             Assistir
@@ -20,6 +29,7 @@ const Recommended = () => {
         </div>
       </div>
     </div>
+
   );
 };
 

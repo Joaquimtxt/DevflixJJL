@@ -9,6 +9,11 @@
     box-sizing: border-box;
 }
 
+.infoContainer img{
+  width: 1920px;
+  height: 400px;
+}
+
 
 .btnRecommended {
   background-color: #ffffff;

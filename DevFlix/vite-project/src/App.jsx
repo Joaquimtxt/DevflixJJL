@@ -7,6 +7,8 @@ import Recommended from "./components/recommended/Recommended"
 import MovieSelect from "./components/movieSelect/MovieSelect"
 import Category from "./components/category/Category"
 import { useEffect, useState } from "react"
+
+
 function App() {
   
   const apiUrl = 'https://api.themoviedb.org/3/'
@@ -24,13 +26,46 @@ function App() {
   .catch(err => console.error(err));
  
  
+  const [pesquisar, setPesquisar] = useState("")
+  const [movies, setMovies] = useState([])
+ 
+  const searchTitle = async (titulo) => {
+    const response = await fetch(`${apiUrl}search/movie?query=${titulo}&language=pt-br&page=1&with_genre=28`, options);
+    const data = await response.json()
 
 
-  
+    setMovies(data.results);
+  };
+
+useEffect(() =>{
+  searchTitle("Jogos Mortais")
+}, [])
+
+const [recommendedMovies, setRecommended] = useState([]);
+
+  const searchRecommended = async () => {
+ 
+      const response = await fetch(`${apiUrl}movie/popular?language=pt-br&page=1`, options);
+      const data = await response.json();
+      setRecommended(data.results[0]);
+  };
+
+  useEffect(() => {
+    searchRecommended();
+  },[]);
+
   return (
     <>
       <Header />
-      <Recommended />
+        
+      
+        <Recommended 
+        Title={recommendedMovies.title}
+        Desc={recommendedMovies.overview}
+        Poster={recommendedMovies.backdrop_path}
+        />
+    
+      <MovieSelect Titulo="Saga Fast and Furious" movies={movies} />
       <Category />
     <Footer />
     </>
