@@ -1,35 +1,30 @@
-import { useState, useEffect } from "react";
 import styles from "./Recommended.module.css";
 
-
-
-
-
-
 const Recommended = (props) => {
-
-  const poster = `https://image.tmdb.org/t/p/original/${props.Poster}`
+  const poster = `https://image.tmdb.org/t/p/original/${props.Poster}`;
 
   console.log("Props recebidas:", props);
 
-
   return (
     <div className={styles.containerRecommended}>
-      <div className={styles.infoContainer}>
-        <img src={poster} alt="" className="img-fluid object-fit-cover" />
-        <div className={styles.infoText}>
-          <span>Recomendado</span>
-          <h1>{props.Title}</h1>
-          <p>
-           {props.Desc}
-          </p>
-          <a href="#" className={styles.btnRecommended}>
-            Assistir
-          </a>
+      <div className="container-fluid mt-3 mb-3">
+        <div className={styles.infoContainer}>
+          <img src={poster} alt="" className="img-fluid object-fit-cover" />
+          <div className={styles.infoText}>
+            <span className="text-light">Recomendado</span>
+            <div className={styles.titleContainer}>
+              <h1 className="text-light">{props.Title}</h1>
+            </div>
+            <div className={styles.descContainer}>
+              <p className="text-light">{props.Desc}</p>
+            </div>
+            <a href="#" className={styles.btnRecommended}>
+              Assistir
+            </a>
+          </div>
         </div>
       </div>
     </div>
-
   );
 };
 

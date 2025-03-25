@@ -1,19 +1,18 @@
 .containerRecommended {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .infoText {
-    position: absolute;
-    left: 2rem;
-    top: 10rem;
-    box-sizing: border-box;
+  position: absolute;
+  left: 2rem;
+  top: 7rem;
+  box-sizing: border-box;
 }
 
-.infoContainer img{
+.infoContainer img {
   width: 1920px;
   height: 400px;
 }
-
 
 .btnRecommended {
   background-color: #ffffff;
@@ -27,8 +26,16 @@
   text-decoration: none;
 }
 
+.titleContainer {
+  width: 30%;
+}
+
+.descContainer {
+  width: 20%;
+}
+
 .btnRecommended:hover {
-    color: white;
+  color: white;
   animation: rgb 5s infinite;
 }
 
@@ -42,5 +49,17 @@
 
   100% {
     background-color: blue;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .titleContainer {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .descContainer {
+    width: 344px;
   }
 }
