@@ -36,7 +36,7 @@ function App() {
 
     setMovies(data.results);
   };
-  
+
 useEffect(() =>{
   searchTitle("Jogos Mortais")
 }, [])
@@ -54,8 +54,6 @@ const [recommendedMovies, setRecommended] = useState([]);
     searchRecommended();
   },[]);
 
-
-  
   return (
     <>
       <Header />
