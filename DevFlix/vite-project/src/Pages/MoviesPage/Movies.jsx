@@ -2,22 +2,34 @@ import React, { useEffect, useState } from 'react';
 import MovieSelect from "../../components/movieSelect/MovieSelect";
 
 const Movies = ({ apiUrl, options }) => {
-  const [movies, setMovies] = useState([]);
+  const [actionMovies, setActionMovies] = useState([]);
+  const [dramaMovies, setDramaMovies] = useState([]);
+  const [horrorMovies, setHorrorMovies] = useState([]);
+  const [animationMovies, setAnimationMovies] = useState([]);
+  const [comedyMovies, setComedyMovies] = useState([]);
 
-  const searchTitle = async (titulo) => {
-    const response = await fetch(`${apiUrl}search/movie?query=${titulo}&language=pt-br&page=1&with_genre=28`, options);
+  const searchByGenre = async (genreId, setMovies) => {
+    const response = await fetch(`${apiUrl}discover/movie?with_genres=${genreId}&language=pt-br&page=1`, options);
     const data = await response.json();
     setMovies(data.results);
   };
 
   useEffect(() => {
-    searchTitle("Ação");
+    searchByGenre(28, setActionMovies); 
+    searchByGenre(18, setDramaMovies); 
+    searchByGenre(27, setHorrorMovies); 
+    searchByGenre(16, setAnimationMovies); 
+    searchByGenre(35, setComedyMovies); 
   }, [apiUrl, options]);
 
   return (
     <div>
       <h1 className='text-light'>Filmes</h1>
-      <MovieSelect Titulo="Ação" movies={movies} />
+      <MovieSelect Titulo="Ação" movies={actionMovies} />
+      <MovieSelect Titulo="Drama" movies={dramaMovies} />
+      <MovieSelect Titulo="Terror" movies={horrorMovies} />
+      <MovieSelect Titulo="Animação" movies={animationMovies} />
+      <MovieSelect Titulo="Comédia" movies={comedyMovies} />
     </div>
   );
 };
