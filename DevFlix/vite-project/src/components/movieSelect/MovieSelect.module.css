@@ -1,9 +1,16 @@
 
-
+/*O moviescroll estava permitindo scrollar a div no eixo y do card, agora não está mais*/
 .movieScroll{
+  display: flex;
+  flex-wrap:nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
  
+  }
+  .movieScroll::-webkit-scrollbar{
+  display: none;
   }
   .card {
     width: 310px;
