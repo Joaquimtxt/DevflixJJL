@@ -24,10 +24,10 @@ const MovieSelect = (props) => {
         <h1 className='ms-xl-5 ms-2'>{props.Titulo}</h1>
         <div className={`d-flex flex-column flex-md-row justify-content-start mt-2 mb-xl-5 mb-2 overflow-x-scroll ${styles.movieScroll}`} ref={scrollRef}>
        <MovieCard
-       Year ={2024}
+       Year ={props.release_date}
        Poster={"https://placehold.co/300x400"}
-       Title={"Titulo"}
-       Type={"Filme"}
+       Title={props.title}
+       Type={"Tipo"}
        />
         <MovieCard
        Year ={2024}
