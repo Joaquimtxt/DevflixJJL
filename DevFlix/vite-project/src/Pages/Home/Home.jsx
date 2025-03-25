@@ -41,7 +41,7 @@ const [recommendedMovies, setRecommended] = useState([]);
         Poster={recommendedMovies.backdrop_path}
         />
     
-      <MovieSelect Titulo="Saga Fast and Furious" movies={movies} />
+      <MovieSelect Titulo="Lançamentos DevFlix" movies={movies} />
       <Category />
     </>
   )
