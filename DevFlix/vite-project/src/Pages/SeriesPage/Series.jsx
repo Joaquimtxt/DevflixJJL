@@ -19,9 +19,9 @@ const Series = ({ apiUrl, options }) => {
     searchByGenre(16, setAnimationSeries, '6513', '', '', '8.0'); 
       searchByGenre(16, setAdultAnimationSeries, '161919'); 
       searchByGenre(35, setComedySeries, '193171', '1990-01-01', '2010-12-31', '7.5'); 
-    searchByGenre(10765, setSciFiSeries); 
-    searchByGenre(18, setDramaSeries); 
-    searchByGenre(16, setAnimeSeries, '210024', '2000-01-01', '2025-12-31', '8.0');
+    searchByGenre(10765, setSciFiSeries, '', '', '8.5'); 
+    searchByGenre(18, setDramaSeries, '', '1990-01-01', '8.5'); 
+    searchByGenre(16, setAnimeSeries, '210024', '2000-01-01', '', '8.5');
   }, [apiUrl, options]);
 
   return (
