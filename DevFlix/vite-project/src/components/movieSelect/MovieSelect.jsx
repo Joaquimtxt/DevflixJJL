@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 import { useRef } from 'react';
 import MovieCard from './MovieCard';
 
-const MovieSelect = ({ Titulo, movies }) => {
+const MovieSelect = ({ Titulo, movies = [], series = [] }) => {
   const scrollRef = useRef(null);
 
   const handleScroll1 = () => {
@@ -18,7 +18,7 @@ const MovieSelect = ({ Titulo, movies }) => {
       scrollRef.current.scrollBy({ left: -400, behavior: 'smooth' });
     }
   };
-
+  const items = series.length > 0 ? series : movies;
   return (
     <div className={`container-fluid bg-body-secondary ${styles.movie}`}>
       <h1 className='ms-xl-5 ms-2'>{Titulo}</h1>
@@ -29,13 +29,12 @@ const MovieSelect = ({ Titulo, movies }) => {
         >
           {/* O movies está sendo mapeado no App.jsx na const = movies */}
 
-          {movies.map((movie) => (
+          {items.map((item) => (
             <MovieCard
-              key={movie.id}
-              Poster={movie.poster_path}
-              Title={movie.title}
-              Type={movie.media_type || 'Movie'}
-              {...movie}
+              key={item.id}
+              Poster={item.poster_path}
+              Title={item.title || item.name}
+              Type={item.media_type || 'Movie'}
             />
           ))}
         </div>
