@@ -14,8 +14,8 @@ const Recommended = (props) => {
         <img src={poster} alt="" className="img-fluid object-fit-cover" />
         <div className={styles.infoText}>
           <span>Recomendado</span>
-          <h1>{props.Title}</h1>
-          <p>
+          <h1 className="col-9 col-md-12">{props.Title}</h1>
+          <p className="col-9 col-md-12">
            {props.Desc}
           </p>
           <a href="#" className={styles.btnRecommended}>

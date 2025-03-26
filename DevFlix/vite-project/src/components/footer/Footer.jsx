@@ -28,7 +28,7 @@ const Footer = () => {
 
             </div>
             <div className='col-12 col-md text-center mt-2 mt-md-0 text-decoration-none text-lg-center'>
-                <p className="text-light">
+                <p>
                 Projeto desenvolvido por: 
                    <DevGithub github="https://github.com/JoaoFCosta" devNome="@JoaoFCosta" />| <DevGithub github="https://github.com/Joaquimtxt" devNome="@Joaquimtxt"/>| <DevGithub github="https://github.com/LLuizXL" devNome="@LLuizXL"/>
                 </p>
