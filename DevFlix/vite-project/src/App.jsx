@@ -8,11 +8,9 @@ import Footer from "./components/footer/Footer";
 import Home from "./Pages/Home/Home";
 import Movies from "./Pages/MoviesPage/Movies";
 import Series from "./Pages/SeriesPage/Series";
-import "./scss/styles.scss"
-import { FaSun, FaMoon } from "react-icons/fa";
+import "./scss/styles.scss";
 
 const App = () => {
-
   const apiUrl = "https://api.themoviedb.org/3/";
   const options = {
     method: "GET",
@@ -43,7 +41,7 @@ const App = () => {
     .catch((err) => console.error(err));
   return (
     <Router>
-      <Header/>
+      <Header />
       <Routes>
         <Route path="/" element={<Home apiUrl={apiUrl} options={options} />} />
         <Route
@@ -59,6 +57,5 @@ const App = () => {
     </Router>
   );
 };
-
 
 export default App;
