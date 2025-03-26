@@ -1,0 +1,4 @@
+.search-bar-container {
+    position: relative;
+    z-index: 1; /* Certifique-se de que a barra de pesquisa tenha um z-index menor */
+  }

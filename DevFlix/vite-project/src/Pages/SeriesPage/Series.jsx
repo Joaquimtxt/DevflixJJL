@@ -26,7 +26,7 @@ const Series = ({ apiUrl, options }) => {
 
   return (
     <div>
-      <h1 className='text-light'>Séries</h1>
+      <h1 className='text-light text-center'>Séries</h1>
       <MovieSelect Titulo="Animação" series={animationSeries} />
       <MovieSelect Titulo="Comédia" series={comedySeries} />
       <MovieSelect Titulo="Animação para adultos" series={adultAnimationSeries} />

@@ -78,9 +78,9 @@ function Home() {
 
   return (
     <div>
-      <div className="container mt-4 mb-3">
+      <div className="container mt-4 mb-3 position-relative">
         <div className="search-bar-container">
-          <form onSubmit={handleSearch} className="d-flex align-items-center">
+          <form onSubmit={handleSearch} className="d-flex align-items-center w-100 ">
             <div className="input-group mb-3">
               <input
                 className=" text-light border border-4 border-danger-subtle form-control fs-4 bg-black"
