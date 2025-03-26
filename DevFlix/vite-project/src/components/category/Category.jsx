@@ -1,6 +1,9 @@
 import styles from "./Category.module.css";
 
-const Category = () => {
+
+const Category = (props) => {
+  
+  const poster = `https://image.tmdb.org/t/p${props.Poster}`
   return (
     <div className="text-center">
       <h5 className="mt-2 text-light">o conteúdo que você ama</h5>

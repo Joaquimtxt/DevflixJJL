@@ -24,7 +24,7 @@ const MovieSelect = ({ Titulo, movies }) => {
       <h1 className='ms-xl-5 ms-2 text-light'>{Titulo}</h1>
       <div className={`position-relative ${styles.movieScroll}`} >
         <div
-          className={`d-flex flex-nowrap justify-content-start mt-2 mb-xl-5 mb-2 ${styles.movieScroll}`}
+          className={`d-flex flex-nowrap justify-content-start mt-2 mb-xl-5 mb-2 p-2 ${styles.movieScroll}`}
           ref={scrollRef}
         >
           {/* O movies está sendo mapeado no App.jsx na const = movies */}
