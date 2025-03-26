@@ -44,31 +44,13 @@ const Series = ({ apiUrl, options }) => {
 
   return (
     <div>
-      <h1 className="text-center">Séries</h1>
-      <div>
-        <h2 className="ms-3">Animação</h2>
-        <MovieSelect series={animationSeries} />
-      </div>
-      <div>
-        <h2 className="ms-3">Comédia</h2>
-        <MovieSelect series={comedySeries} />
-      </div>
-      <div>
-        <h2 className="ms-3">Animações para adultos</h2>
-        <MovieSelect series={adultAnimationSeries} />
-      </div>
-      <div>
-        <h2 className="ms-3">Ficção cientifica</h2>
-        <MovieSelect series={scifiMovies} />
-      </div>
-      <div>
-        <h2 className="ms-3">Animes</h2>
-        <MovieSelect series={animeSeries} />
-      </div>
-      <div>
-        <h2 className="ms-3">Drama</h2>
-        <MovieSelect series={dramaSeries} />
-      </div>
+      <h1 className='text-light text-center'>Séries</h1>
+      <MovieSelect Titulo="Animação" series={animationSeries} />
+      <MovieSelect Titulo="Comédia" series={comedySeries} />
+      <MovieSelect Titulo="Animação para adultos" series={adultAnimationSeries} />
+      <MovieSelect Titulo="Ficção Científica" series={scifiMovies} />
+      <MovieSelect Titulo="Animes" series={animeSeries} />
+      <MovieSelect Titulo="Drama" series={dramaSeries} />
     </div>
   );
 };

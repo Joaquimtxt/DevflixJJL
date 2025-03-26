@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header className="navbar navbar-expand-lg navbar-dark bg-gray-700 bg-gradient d-flex z-3 justify-content-between align-items-center py-1 px-2">
+    <header className={`navbar navbar-expand-lg navbar-dark bg-gray-700 bg-gradient d-flex z-3 justify-content-between align-items-center py-1 px-2 ${styles.infoContainer}`}>
       <div className="container-fluid">
         <button
           className="navbar-toggler"

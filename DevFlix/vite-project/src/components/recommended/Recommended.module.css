@@ -1,3 +1,8 @@
+.infoContainer {
+  position: relative;
+  z-index: 1; 
+}
+
 .infoText {
   position: absolute;
   left: 2rem;
