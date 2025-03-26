@@ -30,15 +30,27 @@ function Home() {
     .then((res) => console.log(res))
     .catch((err) => console.error(err));
 
-  const searchTitle = async (titulo) => {
-    const response = await fetch(
-      `${apiUrl}search/movie?query=${titulo}&language=pt-br&page=1&with_genre=28`,
-      options
-    );
-    const data = await response.json();
-
-    setMovies(data.results);
-  };
+    const searchTitle = async (titulo) => {
+      try {
+        const movieResponse = await fetch(
+          `${apiUrl}search/movie?query=${titulo}&language=pt-br&page=1`,
+          options
+        );
+        const movieData = await movieResponse.json();
+  
+        const tvResponse = await fetch(
+          `${apiUrl}search/tv?query=${titulo}&language=pt-br&page=1`,
+          options
+        );
+        const tvData = await tvResponse.json();
+  
+        const combinedResults = [...movieData.results, ...tvData.results];
+  
+        setMovies(combinedResults);
+      } catch (error) {
+        console.error(error);
+      }
+    };
 
   const searchRecommended = async () => {
     const response = await fetch(
