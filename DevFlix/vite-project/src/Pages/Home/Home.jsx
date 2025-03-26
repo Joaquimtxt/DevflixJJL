@@ -113,11 +113,11 @@ function Home() {
         </div>
       )}
 
-<div className="container">
-        <h1 className="m-4">Novidades Devflix</h1>
+<div>
+        <h1>Novidades Devflix</h1>
         <MovieSelect movies={popularMovies} />
 
-        <h1 className="m-4">Séries em Alta</h1>
+        <h1>Séries em Alta</h1>
         <MovieSelect series={popularSeries} />
       </div>
     </div>
