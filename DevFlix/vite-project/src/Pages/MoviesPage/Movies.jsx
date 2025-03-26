@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MovieSelect from "../../components/movieSelect/MovieSelect";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
 
 const Movies = ({ apiUrl, options }) => {
   const [actionMovies, setActionMovies] = useState([]);

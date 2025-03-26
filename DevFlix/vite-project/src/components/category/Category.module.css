@@ -8,15 +8,16 @@
 }
 
 .categoryContainer h1 {
-    color: red;
+  color: red;
 }
 
 .categoryList {
-  background: #000000;
+  background: rgb(88, 16, 16);
 }
 
 .categoryList img {
-  mask-image: linear-gradient(to top, transparent 10%, black 100%);
+mask-image: linear-gradient(to top, transparent 10%, black 90%);
+  
 }
 
 .movieTitle {

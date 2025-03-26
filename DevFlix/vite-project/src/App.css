@@ -1,8 +1,7 @@
 :root{
-    --bs-body-bg: #777;
   }
   
-  [data-bs-theme="dark"]{
+  [data-bs-theme="light"]{
       --bs-body-bg: #1a1a1a;
-      --bs-body-color: red;
+      --bs-body-color: #1a1a1a;
   }
