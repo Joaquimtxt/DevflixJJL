@@ -31,6 +31,7 @@ const MovieSelect = ({ Titulo, movies }) => {
 
           {movies.map((movie) => (
             <MovieCard
+            
               key={movie.id}
               Poster={movie.poster_path}
               Title={movie.title}
@@ -42,13 +43,13 @@ const MovieSelect = ({ Titulo, movies }) => {
         <ion-icon
           name="chevron-back-outline"
           size="large"
-          className={`d-none d-xl-block ${styles.scrollIcon2}`}
+          className={`d-none d-md-block ${styles.scrollIcon2}`}
           onClick={handleScroll2}
         ></ion-icon>
         <ion-icon
           name="chevron-forward-outline"
           size="large"
-          className={`d-none d-xl-block ${styles.scrollIcon1}`}
+          className={`d-none d-md-block ${styles.scrollIcon1}`}
           onClick={handleScroll1}
         ></ion-icon>
       </div>

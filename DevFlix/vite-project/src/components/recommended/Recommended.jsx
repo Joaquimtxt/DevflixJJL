@@ -8,7 +8,7 @@ const Recommended = (props) => {
 
   return (
     
-      <div className="container-fluid p-3 mt-3">
+      <div className="container-fluid p-3 mt-3 pb-md-0 pb-5">
     <div className={styles.containerRecommended}>
       <div className={styles.infoContainer}>
         <img src={poster} alt="" className="img-fluid object-fit-cover" />
@@ -18,7 +18,7 @@ const Recommended = (props) => {
           <p>
            {props.Desc}
           </p>
-          <a href="#" className={styles.btnRecommended}>
+          <a href="#" className={`${styles.btnRecommended}`}>
             Assistir
           </a>
         </div>

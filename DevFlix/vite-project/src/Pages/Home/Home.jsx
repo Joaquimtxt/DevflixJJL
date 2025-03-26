@@ -1,6 +1,8 @@
 import Recommended from "../../components/recommended/Recommended";
 import MovieSelect from "../../components/movieSelect/MovieSelect";
 import Category from "../../components/category/Category";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
 import { useEffect, useState } from "react";
 
 function Home() {
@@ -17,6 +19,11 @@ function Home() {
   const [movies, setMovies] = useState([]);
   const [recommendedMovie, setRecommended] = useState([]);
   const [popularMovies, setPopular] = useState([]);
+  const [realityMovies, setRealityMovies] = useState([]);
+  const [kidsMovies, setKidsMovies] = useState([]);
+  const [animationMovies, setAnimationMovies] = useState([]);
+  const [ScifiMovies, setScifiMovies] = useState([]);
+  
   const [pesquisar, setPesquisar] = useState("");
   
 
@@ -26,6 +33,29 @@ function Home() {
     .then((res) => console.log(res))
     .catch((err) => console.error(err));
 
+
+const getKidsMovie = async () =>{
+  const response = await fetch(`${apiUrl}discover/tv?language=pt-br&with_genres=10762&vote_average.gte=8`, options)
+  const data = await response.json()
+
+  setKidsMovies(data.results[2])
+
+  
+
+}
+const getAnimationMovie = async () => {
+  const response = await fetch(`${apiUrl}discover/tv?language=pt-br&with_genres=16&vote_average.gte=8`, options)
+  const data = await response.json()
+
+  setAnimationMovies(data.results[2])
+}
+
+const getRealityMovie = async () => {
+  const response = await fetch(`${apiUrl}discover/tv?language=pt-br&with_genres=10764`, options)
+  const data = await response.json()
+
+  setAnimationMovies(data.results)
+}
 
 
   const searchTitle = async (titulo) => {
@@ -38,7 +68,7 @@ function Home() {
     setMovies(data.results);
   };
 
-  const searchRecommended = async () => {
+  const getRecommended = async () => {
     const response = await fetch(
       `${apiUrl}movie/popular?language=pt-br&page=1`,
       options
@@ -48,7 +78,7 @@ function Home() {
     setRecommended(data.results[2]);
   };
 
-  const searchPopular = async () => {
+  const getPopular = async () => {
      const response = await fetch(`${apiUrl}movie/popular?language=pt-br&page=1`,
        options
       );
@@ -61,10 +91,15 @@ function Home() {
 
 
   useEffect(() => {
-    searchTitle("");
-    searchRecommended(setRecommended);
-    searchPopular(setPopular);
+    getAnimationMovie()
+    getKidsMovie()
+    getRealityMovie()
+    searchTitle("Spider-Man");
+    getRecommended(setRecommended);
+    getPopular(setPopular);
+
   }, []);
+
 
 
 
@@ -98,8 +133,21 @@ function Home() {
       />
     </div>
 
-      <Category movies={movies} />
-      </div>
+
+
+
+
+<Category
+  Title={animationMovies.name}
+  Poster={animationMovies.poster_path}
+  Categoria={animationMovies.vote_average}
+/>
+
+
+
+
+
+  </div>
    
   );
 }
