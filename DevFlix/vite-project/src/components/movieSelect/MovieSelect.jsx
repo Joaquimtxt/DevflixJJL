@@ -52,13 +52,13 @@ const MovieSelect = ({ Titulo, movies = [], series = [] }) => {
         <ion-icon
           name="chevron-back-outline"
           size="large"
-          className={`d-none d-xl-block ${styles.scrollIcon2}`}
+          className={`d-none d-md-block ${styles.scrollIcon2}`}
           onClick={handleScroll2}
         ></ion-icon>
         <ion-icon
           name="chevron-forward-outline"
           size="large"
-          className={`d-none d-xl-block ${styles.scrollIcon1}`}
+          className={`d-none d-md-block ${styles.scrollIcon1}`}
           onClick={handleScroll1}
         ></ion-icon>
       </div>

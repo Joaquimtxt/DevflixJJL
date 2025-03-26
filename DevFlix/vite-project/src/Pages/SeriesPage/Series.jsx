@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
 import MovieSelect from "../../components/movieSelect/MovieSelect";
 
 const Series = ({ apiUrl, options }) => {

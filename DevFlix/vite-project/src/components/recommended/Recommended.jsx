@@ -18,7 +18,7 @@ const Recommended = (props) => {
           <p className="col-9 col-md-12">
            {props.Desc}
           </p>
-          <a href="#" className={styles.btnRecommended}>
+          <a href="#" className={`${styles.btnRecommended}`}>
             Assistir
           </a>
         </div>

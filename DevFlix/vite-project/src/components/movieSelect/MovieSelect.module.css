@@ -42,7 +42,7 @@
   transition: all 0.7s;
   z-index: 1;
   /* background: linear-gradient(to top, #0f172a, #334155, transparent); */
-  background: linear-gradient(to top, #991b1b, #dc2626, #f87171, transparent);
+  background: linear-gradient(to top, #991b1b, #dc2626, transparent);
   position: sticky;
   bottom: 0;
   left: 0;
