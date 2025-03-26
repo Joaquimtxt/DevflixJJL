@@ -70,16 +70,17 @@ function Home() {
       <div className="container mt-4 mb-3">
         <div className="search-bar-container">
           <form onSubmit={handleSearch} className="d-flex align-items-center">
-            <input
-              className="ms-2 text-light border border-4 border-danger-subtle rounded-4 form-control fs-4 bg-black"
-              placeholder="Buscar"
-              type="text"
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-            <button type="submit" className="btn btn-danger btn-lg ms-2">
-              Buscar
-            </button>
+            <div className="input-group mb-3">
+              <input
+                className=" text-light border border-4 border-danger-subtle form-control fs-4 bg-black"
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+              <button type="submit" className="btn btn-danger btn-lg ">
+                Buscar
+              </button>
+            </div>
           </form>
         </div>
       </div>
