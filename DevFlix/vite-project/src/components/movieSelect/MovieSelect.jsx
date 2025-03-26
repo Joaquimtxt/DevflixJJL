@@ -1,11 +1,13 @@
 import styles from './MovieSelect.module.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.js";
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import MovieCard from './MovieCard';
+import Description from './Description';
 
 const MovieSelect = ({ Titulo, movies = [], series = [] }) => {
   const scrollRef = useRef(null);
+  const [selectedMovie, setSelectedMovie] = useState(null);
 
   const handleScroll1 = () => {
     if (scrollRef.current) {
@@ -18,6 +20,11 @@ const MovieSelect = ({ Titulo, movies = [], series = [] }) => {
       scrollRef.current.scrollBy({ left: -400, behavior: 'smooth' });
     }
   };
+
+  const handleMovieClick = (movie) => {
+    setSelectedMovie(movie);
+  };
+
   const items = series.length > 0 ? series : movies;
   return (
     <div className={`container-fluid ${styles.movie} p-2`}>
@@ -27,15 +34,17 @@ const MovieSelect = ({ Titulo, movies = [], series = [] }) => {
           className={`d-flex flex-nowrap justify-content-start mt-2 mb-xl-5 mb-2 p-2 ${styles.movieScroll}`}
           ref={scrollRef}
         >
-          {/* O movies está sendo mapeado no App.jsx na const = movies */}
-
           {items.map((item) => (
-            <MovieCard
-              key={item.id}
-              Poster={item.poster_path}
-              Title={item.title || item.name}
-              Type={item.media_type || 'Movie'}
-            />
+            <div key={item.id}>
+              <MovieCard
+                Poster={item.poster_path}
+                Title={item.title || item.name}
+                Type={item.media_type || 'Movie'}
+                onClick={() => handleMovieClick(item)}
+                data-bs-toggle="modal"
+                data-bs-target="#movieModal"
+              />
+            </div>
           ))}
         </div>
         <ion-icon
@@ -51,6 +60,7 @@ const MovieSelect = ({ Titulo, movies = [], series = [] }) => {
           onClick={handleScroll1}
         ></ion-icon>
       </div>
+      {selectedMovie && <Description movieDesc={selectedMovie} />}
     </div>
   );
 };
