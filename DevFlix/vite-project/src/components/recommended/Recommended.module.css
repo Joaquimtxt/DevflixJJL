@@ -3,21 +3,27 @@
 }
 
 .infoText {
-    position: absolute;
-    left: 2rem;
-    top: 18rem;
-    box-sizing: border-box;
+  position: absolute;
+  left: 2rem;
+  top: 18rem;
+  box-sizing: border-box;
+}
+.infoText p {
+  max-width: 400px;
 }
 
 .infoContainer img {
+  border-radius: 10px;
+  mask-image: linear-gradient(to top, transparent 10%, black 90%);
+  opacity: 0.9;
   width: 1920px;
   height: 600px;
+  border: 2px solid whitesmoke;
 }
 
 .btnRecommended {
   background-color: #ffffff;
   color: rgb(0, 0, 0);
-
   padding: 10px 20px;
   font-size: 20px;
   cursor: pointer;
@@ -27,7 +33,7 @@
   transition: all 0.4s;
 }
 .btnRecommended:hover {
-  box-shadow:  0px 2px 20px 1px rgba(154, 9, 12, 1);
+  box-shadow: 0px 2px 20px 1px rgba(154, 9, 12, 1);
   transition: all 0.4s;
   color: white;
   animation: rgb 5s infinite;

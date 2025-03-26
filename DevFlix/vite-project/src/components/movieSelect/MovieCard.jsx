@@ -1,5 +1,6 @@
 import styles from "./MovieSelect.module.css";
-
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
 
 const MovieCard = (props) => {
   const poster = `https://image.tmdb.org/t/p/w300/${props.Poster}`

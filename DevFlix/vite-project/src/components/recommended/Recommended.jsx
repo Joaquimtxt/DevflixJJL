@@ -1,9 +1,10 @@
 import styles from "./Recommended.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.bundle.js";
 
 const Recommended = (props) => {
   const poster = `https://image.tmdb.org/t/p/original/${props.Poster}`;
 
-  console.log("Props recebidas:", props);
 
   return (
     
