@@ -24,8 +24,9 @@ const MovieSelect = ({ Titulo, movies = [], series = [] }) => {
   const handleMovieClick = (movie) => {
     setSelectedMovie(movie);
   };
+  
 
-  const items = series.length > 0 ? series : movies;
+  const items = Array.isArray(series) && series.length > 0 ? series : Array.isArray(movies) ? movies : [];
   return (
     <div className="container-fluid rounded-2 p-2">
       <h1 className='ms-xl-5 ms-2 text-light'>{Titulo}</h1>
