@@ -1,11 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
-import { FiSearch } from "react-icons/fi";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 const Header = () => {
+
   return (
-    <header className="navbar navbar-expand-lg navbar-dark bg-dark d-flex z-3 justify-content-between align-items-center py-1 px-2">
+    <header className="navbar navbar-expand-lg navbar-dark bg-gray-700 bg-gradient d-flex z-3 justify-content-between align-items-center py-1 px-2">
       <div className="container-fluid">
         <button
           className="navbar-toggler"
@@ -39,16 +40,6 @@ const Header = () => {
               </Link>
             </li>
           </ul>
-        </div>
-        <div className={`d-flex align-items-center ${styles.back}`}>
-          <span className="text-light">
-            <FiSearch />
-          </span>
-          <input
-            className={`${styles.searchInput} ms-2 text-light rounded bg-dark border-0 form-control`}
-            placeholder="Buscar"
-            type="text"
-          />
         </div>
       </div>
     </header>

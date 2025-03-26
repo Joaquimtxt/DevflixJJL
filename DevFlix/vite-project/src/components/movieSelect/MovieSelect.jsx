@@ -20,7 +20,7 @@ const MovieSelect = ({ Titulo, movies }) => {
   };
 
   return (
-    <div className={`container-fluid ${styles.movie} p-2`}>
+    <div className="container-fluid rounded-2 p-2">
       <h1 className='ms-xl-5 ms-2 text-light'>{Titulo}</h1>
       <div className={`position-relative ${styles.movieScroll}`} >
         <div
