@@ -17,6 +17,7 @@ function Home() {
   const [movies, setMovies] = useState([]);
   const [recommendedMovie, setRecommended] = useState([]);
   const [popularMovies, setPopular] = useState([]);
+  const [popularSeries, setPopularSeries] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = (event) => {
@@ -58,11 +59,21 @@ function Home() {
 
     setPopular(data.results);
   };
+  const searchPopularSeries = async () => {
+    const response = await fetch(
+      `${apiUrl}tv/popular?language=pt-br&page=1`,
+      options
+    );
+    const data = await response.json();
+
+    setPopularSeries(data.results);
+  };
 
   useEffect(() => {
     searchTitle("");
     searchRecommended(setRecommended);
     searchPopular(setPopular);
+    searchPopularSeries(setPopularSeries);
   }, []);
 
   return (
@@ -101,12 +112,13 @@ function Home() {
         </div>
       )}
 
-      <div>
+<div className="container">
         <h1 className="m-4">Novidades Devflix</h1>
         <MovieSelect movies={popularMovies} />
-      </div>
 
-      <Category movies={movies} />
+        <h1 className="m-4">Séries em Alta</h1>
+        <MovieSelect series={popularSeries} />
+      </div>
     </div>
   );
 }
