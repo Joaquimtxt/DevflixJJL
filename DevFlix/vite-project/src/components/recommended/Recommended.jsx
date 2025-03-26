@@ -8,8 +8,8 @@ const Recommended = (props) => {
 
   return (
     
-      <div className="container-fluid p-3 mt-3 pb-md-0 pb-5">
-    <div className={styles.containerRecommended}>
+      <div className="container-fluid p-3 mt-3">
+    <div className="overflow-hidden">
       <div className={styles.infoContainer}>
         <img src={poster} alt="" className="img-fluid object-fit-cover" />
         <div className={styles.infoText}>

@@ -10,8 +10,9 @@ const Movies = ({ apiUrl, options }) => {
   const [animationMovies, setAnimationMovies] = useState([]);
   const [comedyMovies, setComedyMovies] = useState([]);
 
-  const searchByGenre = async (genreId, setMovies) => {
-    const response = await fetch(`${apiUrl}discover/movie?with_genres=${genreId}&language=pt-br&page=1`, options);
+  const searchByGenre = async (genreId, setMovies, minVoteAverage = '7.5') => {
+    const url = `${apiUrl}discover/movie?with_genres=${genreId}&language=pt-br&page=1&vote_average.gte=${minVoteAverage}`;
+    const response = await fetch(url, options);
     const data = await response.json();
     setMovies(data.results);
   };

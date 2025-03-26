@@ -1,11 +1,12 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
-import { FiSearch } from "react-icons/fi";
+import { FaSun, FaMoon } from "react-icons/fa";
 
 const Header = () => {
+
   return (
-    <header className={`navbar navbar-expand-lg navbar-dark bg-dark ${styles.header}`}>
+    <header className="navbar navbar-expand-lg navbar-dark bg-gray-700 bg-gradient d-flex z-3 justify-content-between align-items-center py-1 px-2">
       <div className="container-fluid">
         <button
           className="navbar-toggler"
@@ -19,11 +20,11 @@ const Header = () => {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <Link to="/" className={styles.logo} id="logo">
+          <Link to="/" className="fs-2 fw-bolder" id="logo">
             DEVFLIX
           </Link>
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item me-lg-3">
+            <li className="nav-item me-lg-3 list-st">
               <Link to="/" className={`nav-link ${styles.link}`}>
                 Início
               </Link>
@@ -40,16 +41,6 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <div className={`d-flex align-items-center ${styles.back}`}>
-          <span className="text-light">
-            <FiSearch />
-          </span>
-          <input
-            className={`${styles.searchInput} ms-2 text-light rounded bg-dark border-0 form-control`}
-            placeholder="Buscar"
-            type="text"
-          />
-        </div>
       </div>
     </header>
   );
@@ -57,5 +48,4 @@ const Header = () => {
 
 export default Header;
 
-// 
-
+//

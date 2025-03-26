@@ -14,16 +14,6 @@
 }
 
 header {
-  display: flex;
-  z-index: 1000;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
   font-family: "Raleway", sans-serif;
 }
 
@@ -40,10 +30,6 @@ header a {
   border-bottom: 2px solid #ffffff;
 }
 
-.logo {
-  font-size: xx-large;
-}
-
 .header li {
   list-style: none;
   display: inline;
@@ -52,10 +38,6 @@ header a {
 
 .logo:hover {
   animation: rgb 10s infinite;
-}
-
-.searchInput {
-  height: 40px;
 }
 
 

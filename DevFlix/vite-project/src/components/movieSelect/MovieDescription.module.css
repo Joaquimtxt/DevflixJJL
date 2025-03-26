@@ -1,0 +1,53 @@
+.modalBackdrop {
+    background: rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.3s ease-in-out forwards;
+    z-index: 999;
+  }
+  
+  .movieModal {
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    background: #000;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    color: #fff;
+    max-height: 100vh;
+    animation: fadeIn 0.3s ease-in-out forwards;
+  }
+  
+  .movieInfo {
+    border-radius: inherit;
+  }
+  
+  .movieInfo img {
+    height: 480px;
+    object-fit: cover;
+  }
+  
+  .movieType {
+    background: linear-gradient(#ffffff00, #000);
+  }
+  
+  .movieType a {
+    margin-top: 1em;
+    padding: 0.2em 0.7em;
+    border-radius: 0.4em;
+  }
+  
+  .containerMisc {
+    padding: 2em 2em 1em;
+  }
+  
+  .desc {
+    padding: 0 2em 2em;
+    text-align: justify;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
