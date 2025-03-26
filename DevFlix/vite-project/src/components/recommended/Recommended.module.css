@@ -12,7 +12,7 @@
   border-radius: 10px;
   mask-image: linear-gradient(to top, transparent 10%, black 90%);
   opacity: 0.9;
-  width: 1920px;
+  width: 100vw;
   height: 600px;
   border: 2px solid whitesmoke;
 }

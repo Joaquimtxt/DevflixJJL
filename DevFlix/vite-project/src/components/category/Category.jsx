@@ -5,7 +5,10 @@ import "bootstrap/dist/js/bootstrap.bundle.js";
 
 const Category = (props) => {
   
-  const poster = `https://image.tmdb.org/t/p/w300/${props.Poster}`
+  const poster = `https://image.tmdb.org/t/p/w400/${props.Poster}`
+  const poster2 = `https://image.tmdb.org/t/p/w400/${props.Poster2}`
+  const poster3 = `https://image.tmdb.org/t/p/w400/${props.Poster3}`
+
   return (
     <div className="text-center">
       <h5 className="mt-2">o conteúdo que você ama</h5>
@@ -16,20 +19,21 @@ const Category = (props) => {
           <div className="m-1">
             <img src={poster}></img>
             <div className={styles.categoryTitle}>⭐ {props.Categoria}</div>
-
-            <div className="fw-bold fs-5 container w-50">{props.Title}</div>
+            
+            <div className="fw-bold container container-fluid w-100"><h5>{props.Title}</h5></div>
+            
           </div>
 
           <div className="m-1">
-            <img src="https://placehold.co/300x400"></img>
-            <div className="fs-5 fw-semibold"><h6>Category Title</h6></div>
-            <div className="fs-5 fw-bold"><h5>Movie Title</h5></div>
+            <img src={poster2}></img>
+            <div className="fs-5 fw-semibold"><h6>⭐ {props.Categoria2}</h6></div>
+            <div className=" fw-bold"><h5>{props.Title2}</h5></div>
           </div>
 
           <div className="m-1">
-            <img src="https://placehold.co/300x400"></img>
-            <div className="fs-5 fw-semibold"><h6>Category Title</h6></div>
-            <div className="fs-5 fw-bold"><h5>Movie Title</h5></div>
+            <img src={poster3}></img>
+            <div className="fs-5 fw-semibold"><h6>⭐ {props.Categoria3}</h6></div>
+            <div className=" fw-bold"><h5>{props.Title3}</h5></div>
           </div>
         </div>
       </div>
