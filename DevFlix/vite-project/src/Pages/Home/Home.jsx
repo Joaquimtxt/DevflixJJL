@@ -43,6 +43,7 @@ function Home() {
     .catch((err) => console.error(err));
 
 
+
 const getKidsMovie = async () =>{
   const response = await fetch(`${apiUrl}discover/tv?language=pt-br&with_genres=10762&vote_average.gte=8&with_original_language=en`, options)
   const data = await response.json()
@@ -115,16 +116,6 @@ const getPopularSeries = async () =>{
 
   }, []);
 
-
-
-
-
-
-
-
-  
-
-
   return (
     <div>
       <div className="container mt-4 mb-3 overflow-hidden">
@@ -175,7 +166,7 @@ const getPopularSeries = async () =>{
         <MovieSelect movies={popularMovies} />
 
         <h1>Séries em Alta</h1>
-        <MovieSelect movies={popularSeries}
+        <MovieSelect series={popularSeries} />
         
         />
       </div>
