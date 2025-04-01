@@ -40,7 +40,7 @@ const MovieSelect = ({ Titulo, movies = [], series = [] }) => {
               <MovieCard
                 Poster={item.poster_path}
                 Title={item.title || item.name}
-                Type={(item.movie_type||series.length > 0 ? 'series' : 'movie')}//Se a lista de series for maior que 0, indica que há séries, e que o Type é series
+                Type={(series.length > 0 ? 'series' : 'movie')}//Se a lista de series for maior que 0, indica que há séries, e que o Type é series
                 //Agora se for === 0, significa que é um Filme
                 onClick={() => handleMovieClick(item)}
                 data-bs-toggle="modal"
