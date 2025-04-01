@@ -13,9 +13,9 @@ const Modal = (props) => {
 
   return (
    
-<div className='modal fade show d-block'>
+<div className='modal fade show d-block' data-bs-toggle="modal">
 
-  <div className='modal-dialog modal-lg'>
+  <div className='modal-dialog modal-lg '>
     <div className='modal-content'>
         <div className='modal-header d-flex flex-row-reverse'>
             <button type='button' className='btn btn-close d-flex align-items-center justify-content-center'

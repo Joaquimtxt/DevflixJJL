@@ -21,6 +21,7 @@ function Home() {
   const [movies, setMovies] = useState([]);
   const [recommendedMovie, setRecommended] = useState([]);
   const [popularMovies, setPopular] = useState([]);
+  const [popularSeries, setPopularSeries] = useState([]);
   const [realityMovies, setRealityMovies] = useState([]);
   const [kidsMovies, setKidsMovies] = useState([]);
   const [animationMovies, setAnimationMovies] = useState([]);
@@ -96,6 +97,13 @@ const getRealityMovie = async () => {
   };
 
 
+const getPopularSeries = async () =>{
+
+  const response = await fetch(`${apiUrl}trending/tv/week?language=pt-br`. options)
+  const data = await response.json();
+
+  setPopularSeries(data.results);
+}
   useEffect(() => {
     getAnimationMovie()
     getKidsMovie()
@@ -103,6 +111,7 @@ const getRealityMovie = async () => {
     searchTitle("");
     getRecommended(setRecommended);
     getPopular(setPopular);
+    getPopularSeries(setPopularSeries)
 
   }, []);
 
@@ -151,16 +160,24 @@ const getRealityMovie = async () => {
       ) : (
         <div>
           <h1 className="m-4">Pesquisa</h1>
+
+          
           <MovieSelect movies={movies} />
         </div>
       )}
 
+      
+
 <div>
+
+
         <h1>Novidades Devflix</h1>
         <MovieSelect movies={popularMovies} />
 
         <h1>Séries em Alta</h1>
-        <MovieSelect series={popularSeries} />
+        <MovieSelect movies={popularSeries}
+        
+        />
       </div>
 
 
